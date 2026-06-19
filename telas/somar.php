@@ -13,31 +13,31 @@
     <title>Somar</title>
 </head>
 <body>
-        <form method="POST" style="text-align:center;margin:3%; padding:5%">
-            <h1>Somar<h1>
-                <br>
-                <div class="mb-3">
-                    <label for="lPrimeiroNumero" class="form-label">Informe o primeiro numero</label>
-                    <input type="number" class="form-control" id="primeiroNumero" name="primeiroNumero">
-                </div>
-                <div class="mb-3">
-                    <label for="lSegundoNumero" class="form-label">Informe o segundo numero</label>
-                    <input type="number" class="form-control" id="segundoNumero" name="segundoNumero">
-                </div>
-                <br>
-            <button type="submit" class="btn btn-primary">Somar
-                <?php
-                    $num1 = $_POST['primeiroNumero'];
-                    $num2 = $_POST['segundoNumero'];
-                    //chamando a variavel que representa a classe funcao
-                    $funcao->coletar($num1, $num2);
-                ?>
-            </button>
-            <h2>
-                <?php
-                    echo $funcao->somar();
-                ?>
-            <h2>
-        <form>
+    <form method="POST" style="background-color: #f0f4ff; text-align:center;margin:3%; padding:5%">
+        <h1>SOMAR<h1>
+        <br>
+        <div class="mb-3">
+            <label for="lPrimeiroNumero" class="form-label">Informe o primeiro numero</label>
+            <input type="number" class="form-control" id="primeiroNumero" name="primeiroNumero">
+        </div>
+        <div class="mb-3">
+            <label for="lSegundoNumero" class="form-label">Informe o segundo numero</label>
+            <input type="number" class="form-control" id="segundoNumero" name="segundoNumero">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Somar
+            <?php
+                $num1 = $_POST['primeiroNumero'];
+                $num2 = $_POST['segundoNumero'];
+                //chamando a variavel que representa a classe funcao
+                $funcao->coletar($num1, $num2);
+            ?>
+        </button>
+        <h3>
+            <?php
+                echo $funcao->somar();
+            ?>
+        <h3>
+    <form>
 </body>
 </html>

@@ -13,8 +13,8 @@
     <title>Multiplicar</title>
 </head>
     <body>
-        <form method="POST" style="text-align:center;margin:3%; padding:5%">
-            <h1>Multiplicar<h1>
+        <form method="POST" style="background-color: #f0f4ff; text-align:center;margin:3%; padding:5%">
+            <h1>MULTIPLICAR<h1>
                 <br>
                 <div class="mb-3">
                     <label for="lPrimeiroNumero" class="form-label">Informe o primeiro numero</label>
@@ -33,11 +33,11 @@
                     $funcao->coletar($num1, $num2);
                 ?>
             </button>
-            <h2>
+            <h3>
                 <?php
                     echo $funcao->multiplicar();
                 ?>
-            <h2>
+            <h3>
         <form>
     </body>
 </html>

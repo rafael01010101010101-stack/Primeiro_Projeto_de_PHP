@@ -10,32 +10,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subtrair</title>
+    <title>Descubra a área do retângulo</title>
 </head>
 <body>
     <form method="POST" style="background-color: #f0f4ff; text-align:center;margin:3%; padding:5%">
-        <h1>SUBTRAIR<h1>
+        <h1>ÁREA DO RETÂNGULO<h1>
         <br>
         <div class="mb-3">
-            <label for="lPrimeiroNumero" class="form-label">Informe o primeiro numero</label>
-            <input type="number" class="form-control" id="primeiroNumero" name="primeiroNumero">
+            <label for="lPrimeiroNumero" class="form-label">Informe o valor da base</label>
+            <input type="number" class="form-control" id="base" name="base">
         </div>
         <div class="mb-3">
-            <label for="lSegundoNumero" class="form-label">Informe o segundo numero</label>
-            <input type="number" class="form-control" id="segundoNumero" name="segundoNumero">
+            <label for="lSegundoNumero" class="form-label">Informe o valor da altura</label>
+            <input type="number" class="form-control" id="altura" name="altura">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Subtrair
+        <button type="submit" class="btn btn-primary">Calcular
             <?php
-                $num1 = $_POST['primeiroNumero'];
-                $num2 = $_POST['segundoNumero'];
-                //chamando a variavel que representa a classe funcao
-                $funcao->coletar($num1, $num2);
+                $base = (float) $_POST['base'];
+                $altura = (float) $_POST['altura'];
             ?>
         </button>
         <h3>
             <?php
-                echo $funcao->subtrair();
+                echo $funcao->areaRetangulo($base, $altura);
             ?>
         <h3>
     <form>

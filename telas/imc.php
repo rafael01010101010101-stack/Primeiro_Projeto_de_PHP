@@ -10,32 +10,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subtrair</title>
+    <title>Equação de Segundo Grau</title>
 </head>
 <body>
     <form method="POST" style="background-color: #f0f4ff; text-align:center;margin:3%; padding:5%">
-        <h1>SUBTRAIR<h1>
+        <h1>EQUAÇÃO DE SEGUNDO GRAU<h1>
         <br>
         <div class="mb-3">
-            <label for="lPrimeiroNumero" class="form-label">Informe o primeiro numero</label>
-            <input type="number" class="form-control" id="primeiroNumero" name="primeiroNumero">
+            <label for="lPrimeiroNumero" class="form-label">Informe a sua altura</label>
+            <input type="number" step="0.01" class="form-control" id="altura" name="altura">
         </div>
         <div class="mb-3">
-            <label for="lSegundoNumero" class="form-label">Informe o segundo numero</label>
-            <input type="number" class="form-control" id="segundoNumero" name="segundoNumero">
+            <label for="lSegundoNumero" class="form-label">Informe o seu peso</label>
+            <input type="number" step="0.01" class="form-control" id="peso" name="peso">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Subtrair
+        <button type="submit" class="btn btn-primary">Calcular
             <?php
-                $num1 = $_POST['primeiroNumero'];
-                $num2 = $_POST['segundoNumero'];
-                //chamando a variavel que representa a classe funcao
-                $funcao->coletar($num1, $num2);
+                $altura = (float) $_POST['altura'];
+                $peso = (float) $_POST['peso'];
             ?>
+
         </button>
         <h3>
             <?php
-                echo $funcao->subtrair();
+                echo $funcao->imc($peso, $altura);
             ?>
         <h3>
     <form>
