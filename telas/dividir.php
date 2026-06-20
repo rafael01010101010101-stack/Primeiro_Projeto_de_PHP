@@ -25,8 +25,8 @@
             <input type="number" class="form-control" id="segundoNumero" name="segundoNumero">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Dividir
-            <?php
+        <button type="submit" class="btn btn-primary">Dividir</button>
+        <?php
             if(isset($_POST['primeiroNumero']) || isset ($_POST['segundoNumero']))
             {
                 $num1 = $_POST['primeiroNumero'];
@@ -34,8 +34,7 @@
                 //chamando a variavel que representa a classe funcao
                 $funcao->coletar($num1, $num2);
             }
-            ?>
-        </button>
+        ?>
         <h3>
             <?php
                 if(isset($_POST['primeiroNumero']) || isset($_POST['segundoNumero']))

@@ -13,7 +13,7 @@
     <title>Adicionar 18% de imposto ao produto</title>
 </head>
 <body>
-    <form method="POST" style="background-color: #f0f4ff; text-align:center;margin:3%; padding:5%">
+    <form method="POST" style="background-color: #f0f4ff; text-align:center; margin: 3%; padding:5%">
         <h1>ADICIONANDO 18% DE IMPOSTO AO PRODUTO</h1>
         <br>
         <div class="mb-3">
@@ -21,19 +21,25 @@
             <input type="number" class="form-control" id="produto" name="produto">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Calcular
-            <h2>
-                <?php
-                    $valor = (float) $_POST['produto'];
-                ?>
-            </h2>
-        </button>
-        <br>
+        <button type="submit" class="btn btn-primary">Calcular</button>
+        <?php
+            if(isset($_POST['produto']))
+            {
+                $valor = (float) $_POST['produto'];
+            }
+        ?>
         <h3>
             <?php
-                echo $funcao->colocarImposto($valor);
+                if(isset($_POST['produto']))
+                {
+                    echo $funcao->colocarImposto($valor);
+                }
+                else
+                {
+                    echo "Preencha os campos!!";
+                }
             ?>
         </h3>
-    <form>
+    </form>
 </body>
 </html>

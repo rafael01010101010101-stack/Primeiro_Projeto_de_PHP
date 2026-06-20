@@ -13,6 +13,8 @@
         <div style="background-color: #f0f4ff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
             <h1>Boas Vindas</h1>
             <br>
+            <h3>Escolha uma das opções abaixo:</h3>
+            <br>
             <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
                 <a href= "telas/somar.php" class="btn btn-primary">Somar</a>
                 <br>

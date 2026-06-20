@@ -25,15 +25,24 @@
             <input type="number" class="form-control" id="altura" name="altura">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Calcular
-            <?php
+        <button type="submit" class="btn btn-primary">Calcular</button>
+        <?php
+            if(isset($_POST['base']) || isset ($_POST['altura']))
+            {
                 $base = (float) $_POST['base'];
                 $altura = (float) $_POST['altura'];
-            ?>
-        </button>
+            }
+        ?>
         <h3>
             <?php
-                echo $funcao->areaRetangulo($base, $altura);
+                if(isset($_POST['base']) || isset($_POST['altura']))
+                {
+                    echo $funcao->areaRetangulo($base, $altura);
+                }
+                else
+                {
+                    echo "Preencha os campos!!";
+                }
             ?>
         <h3>
     <form>

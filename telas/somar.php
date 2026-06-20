@@ -25,17 +25,26 @@
             <input type="number" class="form-control" id="segundoNumero" name="segundoNumero">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Somar
-            <?php
+        <button type="submit" class="btn btn-primary">Somar</button>
+        <?php
+            if(isset($_POST['primeiroNumero']) || isset ($_POST['segundoNumero']))
+            {
                 $num1 = $_POST['primeiroNumero'];
                 $num2 = $_POST['segundoNumero'];
-                //chamando a variavel que representa a classe funcao
+                //chamando a variavel que representa a classe funcao pra coleta o num1 e num2
                 $funcao->coletar($num1, $num2);
-            ?>
-        </button>
+            }
+        ?>
         <h3>
             <?php
-                echo $funcao->somar();
+                if(isset($_POST['primeiroNumero']) || isset ($_POST['segundoNumero']))
+                {
+                    echo $funcao->somar();
+                }
+                else
+                {
+                    echo "Preencha os campos!!";
+                }
             ?>
         <h3>
     <form>

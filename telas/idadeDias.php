@@ -21,17 +21,23 @@
             <input type="number" class="form-control" id="idade" name="idade">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Calcular
-            <h2>
-                <?php
-                    $idade = (float) $_POST['idade'];
-                ?>
-            </h2>
-        </button>
-        <br>
+        <button type="submit" class="btn btn-primary">Calcular</button>
+        <?php
+            if(isset($_POST['idade']))
+            {
+                $idade = (float) $_POST['idade'];
+            }
+        ?>
         <h3>
             <?php
-                echo $funcao->idadeEmDias($idade);
+                if(isset($_POST['idade']))
+                {
+                    echo $funcao->idadeEmDias($idade);
+                }
+                else
+                {
+                    echo "Preencha os campos!!";
+                }
             ?>
         </h3>
     <form>

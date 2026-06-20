@@ -25,17 +25,26 @@
                     <input type="number" class="form-control" id="segundoNumero" name="segundoNumero">
                 </div>
                 <br>
-            <button type="submit" class="btn btn-primary">Multiplicar
-                <?php
+            <button type="submit" class="btn btn-primary">Multiplicar</button>
+            <?php
+                if(isset($_POST['primeiroNumero']) || isset ($_POST['segundoNumero']))
+                {
                     $num1 = $_POST['primeiroNumero'];
                     $num2 = $_POST['segundoNumero'];
-                    //chamando a variavel que representa a classe funcao
+                    //chamando a variavel que representa a classe funcao pra pega o num1 e num2
                     $funcao->coletar($num1, $num2);
-                ?>
-            </button>
+                }
+            ?>
             <h3>
                 <?php
-                    echo $funcao->multiplicar();
+                    if(isset($_POST['primeiroNumero']) || isset($_POST['segundoNumero']))
+                    {
+                        echo $funcao->multiplicar();
+                    }
+                    else
+                    {
+                        echo "Preencha os campos!!";
+                    }
                 ?>
             <h3>
         <form>

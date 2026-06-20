@@ -29,16 +29,25 @@
                 <input type="number" class="form-control" id="c" name="c">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Calcular
-            <?php
+        <button type="submit" class="btn btn-primary">Calcular</button>
+        <?php
+            if(isset($_POST['a']) || isset ($_POST['b']) || isset ($_POST['c']))
+            {
                 $a = (float) $_POST['a'];
                 $b = (float) $_POST['b'];
                 $c = (float) $_POST['c'];
-            ?>
-        </button>
+            }
+        ?>
         <h3>
             <?php
-                echo $funcao->segundoGrau($a, $b, $c);
+                if(isset($_POST['a']) || isset ($_POST['b']) || isset ($_POST['c']))
+                {
+                    echo $funcao->segundoGrau($a, $b, $c);
+                }
+                else
+                {
+                    echo "Preencha os campos!!";
+                }
             ?>
         <h3>
     <form>
