@@ -10,41 +10,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular IMC</title>
+    <title>Mostrando a velocidade media percorrida</title>
 </head>
 <body>
     <form method="POST" style="background-color: #f0f4ff; text-align:center;margin:3%; padding:5%">
-        <h1>CALCULAR IMC<h1>
+        <h1>EXIBINDO A VELOCIDADE MÉDIA</h1>
         <br>
         <div class="mb-3">
-            <label for="lPrimeiroNumero" class="form-label">Informe a sua altura</label>
-            <input type="number" step="0.01" class="form-control" id="altura" name="altura">
+            <label for="lPrimeiroNumero" class="form-label">Informe a distancia percorrida</label>
+            <input type="number" class="form-control" id="distancia" name="distancia">
         </div>
+
         <div class="mb-3">
-            <label for="lSegundoNumero" class="form-label">Informe o seu peso</label>
-            <input type="number" step="0.01" class="form-control" id="peso" name="peso">
+            <label for="lPrimeiroNumero" class="form-label">Informe o tempo gasto</label>
+            <input type="number" class="form-control" id="distancia" name="tempo">
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Calcular</button>
         <?php
-            if(isset($_POST['altura']) || isset ($_POST['peso']))
+            if(isset($_POST['distancia']) || isset ($_POST['tempo']))
             {
-                $altura = (float) $_POST['altura'];
-                $peso = (float) $_POST['peso'];
+                $distancia = (float) $_POST['distancia'];
+                $tempo = (float) $_POST['tempo'];
             }
         ?>
         <h3>
             <?php
-                if(isset($_POST['altura']) || isset($_POST['peso']))
+                if(isset($_POST['distancia']) || isset($_POST['tempo']))
                 {
-                    echo $funcao->imc($peso, $altura);
+                    echo $funcao->velocidadeMedia($distancia, $tempo);
                 }
                 else
                 {
                     echo "Preencha os campos!!";
                 }
             ?>
-        <h3>
+        </h3>
     <form>
 </body>
 </html>

@@ -13,12 +13,104 @@
             $this->resultado = 0;
         }//fim do construtor
 
+        //metodo de calcular o volume do retangulo
+        public function volumeRetangulo($comprimento, $largura, $altura,)
+        {
+            $volume = ($comprimento * $largura * $altura);
+            return $volume;
+        }//fim do metodo
+        
+        //metodo de mostrar o salario baseado nas horas trabalhadas
+        public function salario($valorHora, $horasTrabalhas)
+        {
+            $salario = $valorHora * $horasTrabalhas;
+            return $salario; 
+        }//fim do metodo
+
+        //metodo de mostrar a media de dois numeros
+        public function mediaDoisNumeros(float $num1,float $num2)
+        {
+            return ($num1 + $num2) / 2;
+        }//fim do metodo
+
+        public function tempoVida($vida)
+        {
+            $tempo = $vida - 100;
+            return $tempo;
+        }//fim do metodo
+
+        //metodo de mostrar a velocidade media
+        public function velocidadeMedia($distancia, $tempo) 
+        {
+            $velocidade = $distancia / $tempo;
+            return $velocidade;
+        }//fim do metodo
+
+        //metodo de converter idade em dias
         public function idadeEmDias($idade) 
         {
             return $idade * 365;
-        }
+        }//fim do metodo
+
+        //metodo de converter idade em meses
+        public function idadeEmMeses($idade) 
+        {
+            return $idade * 12;
+        }//fim do metodo
+
+        //metodo de converter celsius em fahrenheit
+        public function celsiusFa($celsius) 
+        {
+            return ($celsius * 9/5) + 32;
+        }//fim do metodo
+
+        //metodo de mostrar a media de tres numeros
+        public function mediaTresNumeros(float $num1,float $num2, float $num3)
+        {
+            return ($num1 + $num2 + $num3) / 3;
+        }//fim do metodo
+
+        //metodo de mostrar o valor em centimetros
+        public function raio(float $num)
+        {
+            return ($num**2) * 3.14;
+        }//fim do metodo
+
+        //metodo de mostrar o valor em centimetros
+        public function metrosCM(float $num)
+        {
+            return $num * 100;
+        }//fim do metodo
+
+        //metodo de mostrar a raiz quadrada do valor
+        public function raiz(float $num)
+        {
+            return $num * 2;
+        }//fim do metodo
+
+        //metodo pra mostra a raiz quadrada e cubica do valor
+        public function quadradoCubo(float $num)
+        {
+            $quadrado = $num ** 2;
+            $cubo = $num ** 3 ;
+
+            return "Quadrado:  $quadrado <br> Cubo: $cubo";
+        }//fim do metodo
+
+        //metodo de mostrar o dobro do valor
+        public function dobroNumero(float $num)
+        {
+            return $num * 2;
+        }//fim do metodo
+
+        //metodo pra colocar 10% de desconto em um produto
+        function colocarDesconto(float $desconto) 
+        {
+            return $desconto / 10;
+        }//fim do metodo de adicionar desconto
+
         //metodo pra colocar 18% de imposto em um produto
-        function colocarImposto($valor) 
+        function colocarImposto(float $valor) 
         {
             return $valor * 1.18;
         }//fim do metodo de adicionar imposto
