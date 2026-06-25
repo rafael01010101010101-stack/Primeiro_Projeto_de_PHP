@@ -63,6 +63,10 @@
                 <a href= "telas/mediaDoisNumeros.php" class="btn btn-primary">Exibindo a media de dois numeros</a>
                 <br>
                 <a href= "telas/salario.php" class="btn btn-primary">Exibindo o salario com base nas horas trabalhadas</a>
+                <br>
+                <a href= "telas/tempoVida.php" class="btn btn-primary">Exibindo quanto tempo de vida resta até 100 anos</a>
+                <br>
+                <a href= "telas/mediaSoma.php" class="btn btn-primary">Exibindo a media e soma de tres numeros</a>
             </div>
         </div>
     </body>

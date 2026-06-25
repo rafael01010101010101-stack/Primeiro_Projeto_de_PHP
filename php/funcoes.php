@@ -52,6 +52,12 @@
             return $idade * 365;
         }//fim do metodo
 
+        //metodo de ve quanto tempo de vida tem até 100 anos
+        public function tempoIdade($tempo) 
+        {
+            return $tempo - 100;
+        }//fim do metodo
+
         //metodo de converter idade em meses
         public function idadeEmMeses($idade) 
         {
@@ -68,6 +74,12 @@
         public function mediaTresNumeros(float $num1,float $num2, float $num3)
         {
             return ($num1 + $num2 + $num3) / 3;
+        }//fim do metodo
+
+        //metodo de mostrar a soma de tres numeros
+        public function somaTresNumeros(float $num1,float $num2, float $num3)
+        {
+            return $num1 + $num2 + $num3;
         }//fim do metodo
 
         //metodo de mostrar o valor em centimetros
